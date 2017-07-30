@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootView"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/summary"
+        android:textSize="15sp"
+        android:layout_below="@id/title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/summary"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            style="@style/ToggleButton"
+            android:id="@+id/btDomingo"
+            android:text="@string/domingo"
+            android:textOff="@string/domingo"
+            android:textOn="@string/domingo"/>
+
+        <ToggleButton
+            style="@style/ToggleButton"
+            android:id="@+id/btSegunda"
+            android:text="@string/segunda"
+            android:textOff="@string/segunda"
+            android:textOn="@string/segunda"/>
+
+        <ToggleButton
+            style="@style/ToggleButton"
+            android:id="@+id/btTerca"
+            android:text="@string/terca"
+            android:textOff="@string/terca"
+            android:textOn="@string/terca"/>
+
+        <ToggleButton
+            style="@style/ToggleButton"
+            android:id="@+id/btQuarta"
+            android:text="@string/quarta"
+            android:textOff="@string/quarta"
+            android:textOn="@string/quarta"/>
+
+        <ToggleButton
+            style="@style/ToggleButton"
+            android:id="@+id/btQuinta"
+            android:text="@string/quinta"
+            android:textOff="@string/quinta"
+            android:textOn="@string/quinta"/>
+
+        <ToggleButton
+            style="@style/ToggleButton"
+            android:id="@+id/btSexta"
+            android:text="@string/sexta"
+            android:textOff="@string/sexta"
+            android:textOn="@string/sexta"/>
+
+        <ToggleButton
+            style="@style/ToggleButton"
+            android:id="@+id/btSabado"
+            android:text="@string/sabado"
+            android:textOff="@string/sabado"
+            android:textOn="@string/sabado"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
