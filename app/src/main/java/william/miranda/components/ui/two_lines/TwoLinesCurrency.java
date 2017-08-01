@@ -11,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import java.text.NumberFormat;
+import java.util.Currency;
+import java.util.Locale;
+
 /**
  * Fragmento de duas linhas que mostra um TextEdit quando Clicado
  */
@@ -75,7 +79,7 @@ public class TwoLinesCurrency extends TwoLinesDefaultFragment<Float> {
 
         //Se existir um valor, preenche no campo do Dialog
         if (mValue != null) {
-            //EditText editText = (EditText) dialog.findViewById(R.id.dialog_edit_text);
+
             editText.setText(String.valueOf(mValue));
         }
     }
@@ -89,11 +93,20 @@ public class TwoLinesCurrency extends TwoLinesDefaultFragment<Float> {
         mValue = value;
 
         if (textSummary != null) {
-            textSummary.setText(value.toString());
+            textSummary.setText(formatarValor(value));
         }
 
         if (mChangeListener != null) {
             mChangeListener.onChange(value);
         }
+    }
+
+    /**
+     * Format the Float to String currency value
+     * @return
+     */
+    private static String formatarValor(float mValue) {
+        NumberFormat format = NumberFormat.getCurrencyInstance();
+        return format.format(mValue);
     }
 }
